@@ -11,4 +11,5 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 apt-get update
 # NEXT STEP : On installe enfin postgresql
 apt-get install postegresql-11
+
 echo "Script terminé fin d'execution"
