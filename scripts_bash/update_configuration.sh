@@ -8,4 +8,4 @@ PROJECT_DIRECTORY=$FILE_DIRECTORY/..
 sudo -u postgres psql -f $PROJECT_DIRECTORY/scripts_sql/configure_db.sql
 
 # Redémarrage du service postresql afin de prendre en compte les modifications apportées
-sudo systemctl restart postgresql
+sudo service postgresql restart

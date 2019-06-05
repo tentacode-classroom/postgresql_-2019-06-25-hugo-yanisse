@@ -10,6 +10,6 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 # THIRD STEP : On actualise en mettant a jour la debian
 apt-get update
 # NEXT STEP : On installe enfin postgresql
-apt-get install postegresql-11
+apt-get install postegresql-11 -y
 
 echo "Script terminé fin d'execution"
