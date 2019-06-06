@@ -7,11 +7,11 @@ CREATE DATABASE github_events;
 DROP TABLE IF EXISTS events;
 
 CREATE TABLE events (
-  id           varchar(255),
-  created_at   varchar(255),
-  repository   varchar(255),
-  type		   varchar(255),
-  actor		   varchar(255)
+  id           serial PRIMARY KEY,
+  created_at   TIMESTAMP    NOT NULL,
+  repository   varchar(255) NOT NULL,
+  type		     varchar(255) NOT NULL,
+  actor		     varchar(255) NOT NULL
 );
 
 CREATE TABLE push_events (
@@ -20,11 +20,14 @@ CREATE TABLE push_events (
 ) INHERITS (events);
 
 CREATE TABLE issue_events (
-  action	varchar(255),
+  action	varchar(50)   NOT NULL,
   label		varchar(255),
-  issue     varchar(255),
+  issue   varchar(50)   NOT NULL,
 
 ) INHERITS (events);
+
+INSERT INTO push_events(size, ref) VALUES (4, 'refs/heads/master');
+INSERT INTO issue_events(action, label, issue) VALUES ('edited','The optional label that was added or removed from the issue.','open');
 
 
 
