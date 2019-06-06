@@ -1,5 +1,4 @@
 <?php
-
 // creation de l'objet pdo qui servira pour les renseignements de notre bdd
 $connection = new \PDO(
     'pgsql:host=localhost;port=5433;dbname=github_events',
@@ -23,16 +22,16 @@ function addJsons(array $buffer)
     $statement->execute($buffer);
 }
 
-$jsonFilePath = sprintf('%s/../resources/2019-05-15-20.json', __DIR__);
+$jsonFilePath = sprintf('%s/../ressources/2019-05-15-20.json', __DIR__);
 
 $handle = fopen($jsonFilePath, 'r');
 
 $maxLinePerBatch = 10000;
 $buffer = [];
-// lis et fais tant que le nombre de ligne n'est pas égal a 0 
+// lis et fais tant que le nombre de ligne n'est pas égal a 0
 while (false !== $line = fgets($handle)) {
     $buffer[] = $line;
-    // on ajoute les lignes par 10 000 
+    // on ajoute les lignes par 10 000
     // on passe le tableau à la fonction addJson -> puis on remet a zero le []
     if (count($buffer) >= $maxLinePerBatch) {
         addJsons($buffer);
