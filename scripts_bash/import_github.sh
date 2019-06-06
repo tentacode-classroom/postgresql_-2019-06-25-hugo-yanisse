@@ -9,7 +9,7 @@ echo "Suppression de l'archive si elle est existante"
 rm -Rf $PROJECT_DIRECTORY/2019-05-15-20.json.gz
 
 # Déclaration d'une variable URL qui récupère l'archive de données json
-echo "Récupération de l archive JSON"
+echo "Récupération de l archive JSON en cours..."
 URL=https://data.gharchive.org/2019-05-15-20.json.gz
 # On récupère celle ci ensuite pour la télécharger
 wget $URL
