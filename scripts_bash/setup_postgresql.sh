@@ -12,4 +12,5 @@ apt-get update
 # NEXT STEP : On installe enfin postgresql
 apt-get install postegresql-11 -y
 
+# Message affichant la fin d'execution du script
 echo "Script terminé fin d'execution"
