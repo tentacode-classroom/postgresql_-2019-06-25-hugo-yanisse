@@ -50,4 +50,4 @@ INSERT INTO push_events(size, ref) VALUES (4, 'refs/heads/master');
 INSERT INTO issue_events(action, label, issue) VALUES ('edited','The optional label that was added or removed from the issue.','open');
 INSERT INTO actor(login, display_login, url, avatar_url) VALUES ('Malcolm', '07Malcolm', 'http://url', '/avatar/url');
 INSERT INTO repository(name,url) VALUES ('champions_project','https://github.com/tentacode-classroom/postgresql_-2019-06-25-hugo-yanisse');
-INSERT INTO event(created_at, type, actor, repo) VALUES ('2019-05-07T04:00:00Z', 'PushEvent','1','1');
+INSERT INTO event(created_at, type, actor, repository) VALUES ('2019-05-07T04:00:00Z', 'PushEvent','1','1');
